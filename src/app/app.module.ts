@@ -4,18 +4,19 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { MyComponentComponent } from './my-component/my-component.component';
-import { YouTubeSearchComponent } from './components/YoutubeSearch.component';
-import { SearchBox } from './components/YoutubeSearch.component';
-import { SearchResultComponent } from './components/YoutubeSearch.component';
-import { youTubeServiceInjectables } from './components/YoutubeSearch.component';
+import { SearchBoxComponent } from './search-box/search-box.component';
+import { YouTubeSearchComponent } from './you-tube-search/you-tube-search.component';
+import { SearchResultComponent } from './search-result/search-result.component';
+
+import { youTubeServiceInjectables } from './you-tube.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MyComponentComponent,
     YouTubeSearchComponent,
-    SearchBox,
+    SearchResultComponent,
+    SearchBoxComponent,
+    YouTubeSearchComponent,
     SearchResultComponent
   ],
   imports: [
