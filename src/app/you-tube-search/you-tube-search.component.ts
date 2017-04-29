@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {SearchResult} from "../search-result";
+import {SearchResult} from '../search-result';
 
 @Component({
   selector: 'youtube-search',

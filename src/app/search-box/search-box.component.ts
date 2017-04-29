@@ -1,4 +1,4 @@
-import { Component, OnInit, EventEmitter, ElementRef} from '@angular/core';
+import {Component, OnInit, EventEmitter, ElementRef, Output} from '@angular/core';
 import {Observable} from 'rxjs';
 
 
@@ -7,7 +7,6 @@ import {YouTubeService} from "../you-tube.service";
 import {SearchResult} from "../search-result";
 
 @Component({
-  outputs: ['loading', 'results'],
   selector: 'search-box',
   templateUrl: './search-box.component.html',
   styleUrls: ['./search-box.component.css']
@@ -15,8 +14,8 @@ import {SearchResult} from "../search-result";
 
 
 export class SearchBoxComponent implements OnInit {
-  loading: EventEmitter<boolean> = new EventEmitter<boolean>();
-  results: EventEmitter<SearchResult[]> = new EventEmitter<SearchResult[]>();
+  @Output() loading: EventEmitter<boolean> = new EventEmitter<boolean>();
+  @Output() results: EventEmitter<SearchResult[]> = new EventEmitter<SearchResult[]>();
 
   constructor(private youtube: YouTubeService,
               private el: ElementRef) {
